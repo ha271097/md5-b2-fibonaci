@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'md5-b2-promise';
+    listF (num: number): number{
+    // let count: number = 0;
+    // let sum: number = 0;
+    let a: number = 1;
+    let b:number = 0;
+    let temp:any;
+    let sum: number = 0;
+    while(num > 0){
+    temp = a;
+    a = a + b;
+    b = temp;
+    sum += a;
+      num --;
+    }
+    return sum;
+  }
+  num: number = 0;
 }
